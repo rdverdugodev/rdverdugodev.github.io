@@ -1,18 +1,21 @@
-function acierto(lasTarjetas) {
-  lasTarjetas.forEach(function(elemento) {
-    elemento.classList.add("acertada");
-  });
+function acierto(lasTarjetas){
+    lasTarjetas.forEach(function(elemento){
+        elemento.classList.add("acertada");
+    });
+
 }
 
-function error(lasTarjetas) {
-  lasTarjetas.forEach(function(elemento) {
-    elemento.classList.add("error");
-  });
+function error(lasTarjetas){
 
-  setTimeout(function() {
-    lasTarjetas.forEach(function(elemento) {
-      elemento.classList.remove("descubierta");
-      elemento.classList.remove("error");
+    lasTarjetas.forEach(function(elemento){
+        elemento.classList.add("error");
     });
-  }, 1000);
+
+    setTimeout(function(){
+        lasTarjetas.forEach(function(elemento){
+            elemento.classList.remove("descubierta");
+            elemento.classList.remove("error");
+        });
+    },1000)
+    
 }

@@ -6,26 +6,51 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Domestika</title>
+    <title>Memo-Meow</title>
     <link
       href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
       rel="stylesheet"
     />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="css/4.css" rel="stylesheet" />
+    <link href="./css/page.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <main>
-      <div id="mesa" class="mesa">
-        
-      </div>
-    </main>
+    <body>
+        <header class="cabecera">
+            <div class="contadores">
+            <div class="contador-item">
+                <h4 class="cabecera-titulo">Tiempo</h4>
+                <div class="cabecera-num">
+                <span id="minutos">- - </span>:<span id="segundos"> - -</span>
+                </div>
+            </div>
+            </div>
+        </header>
+        <main>
+            <div id="mesa" class="mesa"></div>
+            <div id="endGame" class="end-game">
+                <div class="modal">
+                  <h2>¡Bien Hecho!</h2>
+                  <p>Has superado todos los niveles 🏆</p>
+                  <button  class="reiniciar">Reiniciar</button>
+                </div>
+              </div>
+              <div id="game-over" class="game-over">
+                <div class="modal">
+                  <h2>¡Se te acabo el tiempo!</h2>
+                  <p>Vuelve a intentarlo</p>
+                  <button  class="reiniciar">Reiniciar</button>
+                </div>
+              </div>
+        </main>
 
-    <script src="js/variables-globales.js"></script>
-    <script src="js/baraja-reparte.js"></script>
-    <script src="js/descubrir-comparar.js"></script>
-    <script src="js/acierto-error.js"></script>
-    <script src="js/iniciar.js"></script>
-  </body>
+        <script src="js/variables-globales.js"></script>
+        <script src="js/baraja-reparte.js"></script>
+        <script src="./js/cronometro.js"></script>
+        <script src="js/descubrir-comparar.js"></script>
+        <script src="js/acierto-error.js"></script>
+        <script src="js/finalizar.js"></script>
+        <script src="js/gameover.js"></script>
+        <script src="js/iniciar.js"></script>
+    </body>
 </html>
