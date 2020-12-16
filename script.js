@@ -1,18 +1,10 @@
-var verificacion= ["@", ".com" , "gmail"]
-
-
-
-
-
-
-
 function verficacionEmail(){
-    var resultado;
     var email = document.querySelector(".search").value;
+    var mailformat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
-    resultado = email.includes("@");
+    
 
-    if(resultado == true){
+    if(email.match(mailformat)){
         document.querySelector(".flex").classList.remove("error-border");
         document.querySelector(".error-email").classList.remove("display-error-email");
         document.querySelector(".flex").classList.add("valid-email-border");
@@ -20,10 +12,10 @@ function verficacionEmail(){
         document.querySelector("#texto-search").classList.add("desaparece");
         
         setTimeout(function(){ 
-        document.querySelector(".flex").classList.remove("valid-email-border");
-        document.querySelector("#texto-search").classList.remove("desaparece");
-        document.getElementById("texto-search").innerHTML = "";
-    }, 2500);
+            document.querySelector(".flex").classList.remove("valid-email-border");
+            document.querySelector("#texto-search").classList.remove("desaparece");
+            document.getElementById("texto-search").innerHTML = "";
+        }, 2500);
         
     }else{
         document.querySelector(".flex").classList.add("error-border");
@@ -35,3 +27,5 @@ function verficacionEmail(){
 
 
 document.querySelector("#boton").addEventListener("click", verficacionEmail);
+
+
