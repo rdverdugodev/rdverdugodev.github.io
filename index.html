@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Memo-Meow</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
-      rel="stylesheet"
-    />
-    <link href="./css/page.css" rel="stylesheet" />
-    <link href="./css/style.css" rel="stylesheet" />
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="./style.css">
+ 
+</head>
+<body>
+<div class="wrapper">
+  <header class="r1c1 format flex-vertical">
+    <img src="./images/logo.svg" class="logo" alt="logo">
+  </header>
+  <div class="r1-4c2">
+    <picture>
+      <source srcset="./images/hero-mobile.jpg" media="(max-width: 375px)" alt="hero-mobile">
+      <img class="fill" src="./images/hero-desktop.jpg" alt="hero-desktop">
+   </picture>
+  </div>
+  <main class="r2-4c1 format text-align">
+    <h1>We're <span class="title-text" >coming soon</span></h1>
 
-    <body>
-        <header class="cabecera">
-            <div class="contadores">
-            <div class="contador-item">
-                <h4 class="cabecera-titulo">Tiempo</h4>
-                <div class="cabecera-num">
-                <span id="minutos">- - </span>:<span id="segundos"> - -</span>
-                </div>
-            </div>
-            </div>
-        </header>
-        <main>
-            <div id="mesa" class="mesa"></div>
-            <div id="endGame" class="end-game">
-                <div class="modal">
-                  <h2>¡Bien Hecho!</h2>
-                  <p>Has superado todos los niveles 🏆</p>
-                  <button  class="reiniciar">Reiniciar</button>
-                </div>
-              </div>
-              <div id="game-over" class="game-over">
-                <div class="modal">
-                  <h2>¡Se te acabo el tiempo!</h2>
-                  <p>Vuelve a intentarlo</p>
-                  <button  class="reiniciar">Reiniciar</button>
-                </div>
-              </div>
-        </main>
+    <p>Hello fellow shoppers! We're currently building our new fashion store. 
+    Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <script src="js/variables-globales.js"></script>
-        <script src="js/baraja-reparte.js"></script>
-        <script src="./js/cronometro.js"></script>
-        <script src="js/descubrir-comparar.js"></script>
-        <script src="js/acierto-error.js"></script>
-        <script src="js/finalizar.js"></script>
-        <script src="js/gameover.js"></script>
-        <script src="js/iniciar.js"></script>
-    </body>
+    <div class="flex">
+      <input type="text" placeholder="Email Address" class="search"> 
+      <div class="error-email icon-align "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill="none" fill-rule="evenodd"><circle cx="12" cy="12" r="12" fill="#F96464"/><path fill="#FFF" fill-rule="nonzero" d="M13.256 6v9.056h-2V6h2zm-.944 12.464c-.384 0-.699-.104-.944-.312a1.027 1.027 0 0 1-.368-.824c0-.33.125-.608.376-.832.25-.224.563-.336.936-.336.373 0 .68.112.92.336.24.224.36.501.36.832 0 .341-.117.616-.352.824-.235.208-.544.312-.928.312z"/></g></svg></div>
+      <button id="boton" class="boton icon-align"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="20"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671"/></svg></button>
+    </div>
+    <p id="texto-search"></p>
+  </main> 
+  
+  <footer class="r4c1 format text-align">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Roberto Verdugo</a>.
+    </p>
+  </footer>
+
+  
+</div>
+<script src="./script.js"></script>
+</body>
 </html>
